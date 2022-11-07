@@ -1,0 +1,129 @@
+.ltop1-enter-active {
+    animation: showmap 0.2s;
+}
+
+.ltop2-enter-active {
+    animation: showmap 0.3s;
+}
+
+.ltop3-enter-active {
+    animation: showmap 0.4s;
+}
+
+.ltop4-enter-active {
+    animation: showmap 0.5s;
+}
+
+.bTab-enter-active {
+    animation: showBotTab 0.3s;
+}
+
+.rTop1-enter-active {
+    animation: showRmap 0.2s;
+}
+
+.rTop2-enter-active {
+    animation: showRmap 0.3s;
+}
+
+.rTop3-enter-active {
+    animation: showRmap 0.4s;
+}
+
+.rTop4-enter-active {
+    animation: showRmap 0.5s;
+}
+
+.bMap-enter-active {
+    animation: showCmap 0.8s;
+}
+
+// 动画
+@keyframes showmap {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-510px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+// 中间
+@keyframes showBotTab {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(338px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+// 右边
+@keyframes showRmap {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(510px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+// 动画
+@keyframes showCmap {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes myfirst2 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(359deg);
+    }
+}
+
+@keyframes myfirst {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-359deg);
+    }
+}
+
+@keyframes showmap2 {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.animateDiv {
+    animation: showmap2 0.8s;
+}
