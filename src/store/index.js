@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count: 60,//定时更新时间
+    count: 59,//定时更新时间
+    min: 4,
     isJiFen: false,
     isAni: true,
   },
@@ -14,13 +15,18 @@ export default new Vuex.Store({
   mutations: {
     changeCount(state) {
       if (state.count == 0) {
-        state.count = 60
+        state.count = 59
+        if (state.min == 0) {
+          state.min = 5
+        }
+        state.min--
       } else {
         state.count--
       }
     },
     hdCount(state) {
-      state.count = 60
+      state.count = 59
+      state.min = 4
     },
     hdIsJiFen(state, payload) {
       sessionStorage.setItem('jifen', JSON.stringify(payload))
