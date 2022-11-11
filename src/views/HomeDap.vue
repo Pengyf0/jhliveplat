@@ -112,7 +112,8 @@
 						</div>
 						<div class="centerBoxBottom">
 							<transition name="bTab" appear>
-								<TabForm :config="config" v-show="isAni" />
+								<!-- <TabForm :config="config" v-show="isAni" /> -->
+								<MidList :tabData="midTableData" v-show="isAni" />
 							</transition>
 						</div>
 					</div>
@@ -196,6 +197,7 @@ import MidBar from "@/components/contentLeft/MidBar.vue";
 
 import ChinaMap from "@/components/contentCenter/ChinaMap.vue";
 import TabForm from "@/components/contentCenter/TabForm.vue";
+import MidList from "@/components/contentCenter/MidList.vue";
 import XAxisBar from "@/components/contentRIght/XAxisBar.vue";
 import TowPie from "@/components/contentRIght/TowPie.vue";
 import MoreTable from "@/components/contentRIght/MoreTable.vue";
@@ -213,6 +215,7 @@ export default {
 		TowBar,
 		ChinaMap,
 		TabForm,
+		MidList,
 		XAxisBar,
 		TowPie,
 		MoreTable,
@@ -263,6 +266,18 @@ export default {
 				rowNum: 7,
 				evenRowBGC: "#306c86",
 			},
+			midTableData: [
+				{ rank: 1, province: "广东", addUp: "3000", dayActive: "300" },
+				{ rank: 2, province: "上海", addUp: "3000", dayActive: "300" },
+				{ rank: 3, province: "北京", addUp: "3000", dayActive: "300" },
+				{ rank: 4, province: "深圳", addUp: "3000", dayActive: "300" },
+				{ rank: 5, province: "四川", addUp: "3000", dayActive: "300" },
+				{ rank: 6, province: "湖南", addUp: "3000", dayActive: "300" },
+				{ rank: 7, province: "湖北", addUp: "3000", dayActive: "300" },
+				{ rank: 8, province: "江西", addUp: "3000", dayActive: "300" },
+				{ rank: 9, province: "东北", addUp: "3000", dayActive: "300" },
+				{ rank: 10, province: "河南", addUp: "3000", dayActive: "300" },
+			],
 			// 右侧那个柱状图数据
 			barOneData: {
 				name: [],
@@ -1048,11 +1063,11 @@ $ycolor: #e3b337;
 						line-height: 26px;
 						border-radius: 13px;
 						cursor: pointer;
-						opacity: 0.8;
+						opaprovince: 0.8;
 						box-shadow: 0px 0px 5px 5px rgb(56, 85, 175, 0.2) inset;
 
 						&:hover {
-							opacity: 1;
+							opaprovince: 1;
 						}
 					}
 				}
@@ -1146,7 +1161,7 @@ $ycolor: #e3b337;
 			background: url("@/assets/images/map.png") no-repeat center;
 			background-size: 410px 410px;
 			z-index: 2;
-			opacity: 0.85;
+			opaprovince: 0.85;
 		}
 
 		.map1,
@@ -1208,7 +1223,7 @@ $ycolor: #e3b337;
 			background: #fff;
 			width: 50px;
 			height: 125px;
-			opacity: 20%;
+			opaprovince: 20%;
 			transform: rotate(-45deg);
 		}
 
